@@ -16,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
 
@@ -36,7 +36,7 @@
 #include "../module/planner.h"        // for synchronize
 #include "../module/printcounter.h"
 #include "../gcode/queue.h"
-#include "../module/configuration_store.h"
+#include "../module/settings.h"
 #include "../module/stepper/indirection.h"
 
 #if ENABLED(EMERGENCY_PARSER)
@@ -376,8 +376,13 @@ void CardReader::mount() {
     flag.mounted = true;
     SERIAL_ECHO_MSG(STR_SD_CARD_OK);
   }
-  cdroot();
 
+  if (flag.mounted)
+    cdroot();
+  else {
+    spiInit(SPI_SPEED); // Return to base SPI speed
+    ui.set_status_P(GET_TEXT(MSG_SD_INIT_FAIL), -1);
+  }
   ui.refresh();
 }
 
