@@ -57,7 +57,7 @@ OLDWD=`pwd`
 #
 # Compile the 'genpages' command in-place
 #
-(cd ${DN_EXEC}; gcc -o genpages genpages.c getline.c)
+(cd ${DN_EXEC}; cc -o genpages genpages.c getline.c)
 
 #
 # By default loop through all languages
@@ -116,7 +116,7 @@ if [ 1 = 1 ]; then
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
 #include <U8glib.h>

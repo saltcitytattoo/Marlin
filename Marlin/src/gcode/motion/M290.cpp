@@ -16,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
 
@@ -27,7 +27,6 @@
 #include "../gcode.h"
 #include "../../feature/babystep.h"
 #include "../../module/probe.h"
-#include "../../module/temperature.h"
 #include "../../module/planner.h"
 
 #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
@@ -127,7 +126,7 @@ void GcodeSuite::M290() {
         #else
           PSTR("Babystep Z")
         #endif
-        , babystep.axis_total[BS_AXIS_IND(Z_AXIS)]
+        , babystep.axis_total[BS_TOTAL_IND(Z_AXIS)]
       );
     }
     #endif

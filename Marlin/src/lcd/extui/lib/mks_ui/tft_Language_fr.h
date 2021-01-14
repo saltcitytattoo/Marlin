@@ -16,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
 #pragma once
@@ -98,6 +98,8 @@
 #define MOTOR_OFF_TEXT_FR             "M-hors"
 #define MOTOR_OFF_XY_TEXT_FR          "M-hors-XY"
 #define SHUTDOWN_TEXT_FR              "Eteindre"
+#define MACHINE_PARA_FR               "Config"
+#define EEPROM_SETTINGS_FR            "Eeprom Set"
 
 #define U_DISK_TEXT_FR                "Clé usb"
 #define SD_CARD_TEXT_FR               "Carte SD"
@@ -133,26 +135,12 @@
 #define FILAMENT_EXT1_TEXT_FR         "Extr2"
 #define FILAMENT_HEAT_TEXT_FR         "Preheat"
 #define FILAMENT_STOP_TEXT_FR         "Arrêter"
-//#define FILAMENT_CHANGE_TEXT_FR     "Filament remplacer"
 #define FILAMENT_TIPS2_TEXT_FR        "T:"
 #define FILAMENT_TIPS3_TEXT_FR        "Insérer le filament..."
 #define FILAMENT_TIPS4_TEXT_FR        "éjecter le filament..."
 #define FILAMENT_TIPS5_TEXT_FR        "Température trop basse pour démarrer, chauffez svp"
 #define FILAMENT_TIPS6_TEXT_FR        "Terminé"
 
-#if 0
-  #define FILAMENT_REPLAYS_IDLE_TEXT_FR             "Please click <Insérer> or <éjecter> \nto replace filament!"
-  #define FILAMENT_CHANGE_TEXT_FR                   "Please click <Insérer> or <éjecter>,\nAfter pinter pause."
-  #define FILAMENT_DIALOG_LOAD_HEAT_TIPS_FR         "Heating up the nozzle,please wait..."
-  #define FILAMENT_DIALOG_UNLOAD_HEAT_TIPS_FR       "Heating up the nozzle,please wait..."
-  #define FILAMENT_DIALOG_LOAD_CONFIRM1_TIPS_FR     "Heat completed,please load filament to extruder,and click <Confirmer> for start loading."
-  #define FILAMENT_DIALOG_LOAD_CONFIRM2_TIPS_FR     "Please load filament to extruder,and click <Confirmer> for start loading."
-  #define FILAMENT_DIALOG_UNLOAD_CONFIRM_TIPS_FR    "Heat completed,please click <Confirmer> for start unloading.!"
-  #define FILAMENT_DIALOG_LOADING_TIPS_FR           "Is loading ,please wait!"
-  #define FILAMENT_DIALOG_UNLOADING_TIPS_FR         "Is unloading,please wait!"
-  #define FILAMENT_DIALOG_LOAD_COMPLETE_TIPS_FR     "Load filament completed,click <Confirmer> for return!"
-  #define FILAMENT_DIALOG_UNLOAD_COMPLETE_TIPS_FR   "Unload filament completed,click <Confirmer> for return!"
-#endif
 #define FILAMENT_CHANGE_TEXT_FR                   "Please click <Load> \nor <unload>,After \npinter pause."
 #define FILAMENT_DIALOG_LOAD_HEAT_TIPS_FR         "Heating up the nozzle,\nplease wait..."
 #define FILAMENT_DIALOG_UNLOAD_HEAT_TIPS_FR       "Heating up the nozzle,\nplease wait..."
@@ -169,15 +157,8 @@
 #define PRE_HEAT_BED_TEXT_FR          "Bed"
 
 #define FILE_LOADING_FR               "Chargement......"
-#if 0
-  #define NO_FILE_AND_CHECK_FR        "Aucun fichier trouvé! Insérez une carte SD ou un disque U!"
-#else
-  #define NO_FILE_AND_CHECK_FR        "Aucun fichier,vérifiez à nouveau!"
-#endif
-
+#define NO_FILE_AND_CHECK_FR          "Aucun fichier, vérifiez à nouveau!"
 #define NO_FILE_FR                    "Pas de fichier!"
-
-
 
 #define EXTRUDER_TEMP_TEXT_FR         "Temper"
 #define EXTRUDER_E_LENGTH1_TEXT_FR    "Extruder1"
@@ -206,10 +187,6 @@
 #define STEP_5PERCENT_FR              "5%"
 #define STEP_10PERCENT_FR             "10%"
 
-#define ZOFFSET_FR                    "Z Offset"
-#define ZOFFSET_INC_FR                "Ajouter"
-#define ZOFFSET_DEC_FR                "Réduire"
-
 #define TITLE_READYPRINT_FR           "Prête"
 #define TITLE_PREHEAT_FR              "Préchauffe"
 #define TITLE_MOVE_FR                 "Déplace"
@@ -224,7 +201,7 @@
 #define TITLE_ADJUST_FR               "Réglage"
 #define TITLE_WIRELESS_FR             "Sans fil"
 #define TITLE_FILAMENT_FR             "Remplacer"
-#define TITLE_ABOUT_FR                "A propos"
+#define TITLE_ABOUT_FR                "À propos"
 #define TITLE_FAN_FR                  "Ventilateur"
 #define TITLE_LANGUAGE_FR             "Langue"
 #define TITLE_PAUSE_FR                "Pause"
@@ -232,7 +209,6 @@
 #define TITLE_CLOUD_TEXT_FR           "Cloud"
 #define TITLE_DIALOG_CONFIRM_FR       "Confirm"
 #define TITLE_FILESYS_FR              "FileSys"
-#define TITLE_ZOFFSET_FR              "Z Offset"
 
 #define DIALOG_CLOSE_MACHINE_FR       "Closing machine......"
 
@@ -249,28 +225,43 @@
 #define DIALOG_CANCEL_PRINT_FR        "Arrêter?"
 
 #define DIALOG_STOP_FR                "Arrêter"
-#define DIALOG_REPRINT_FROM_BREAKPOINT_FR   "Continuer?"
-//#define DIALOG_UNBIND_PRINTER_FR          "Non lié?"
-#define DIALOG_ERROR_TIPS1_FR               "Erreur:error:Aucun fichier, \nvérifiez à nouveau."
-#define DIALOG_ERROR_TIPS2_FR               "Erreur:La opération a échoué. \nVerifiez que le baudrate de l'écran et de \nla carte mère soient identique!"
-#define DIALOG_ERROR_TIPS3_FR               "Erreur: le nom du fichier ou le \nchemin d'accès est trop long."
-#define DIALOG_UNBIND_PRINTER_FR            "Unbind the printer?"
-#define DIALOG_FILAMENT_NO_PRESS_FR         "Filament detection switch is not pressed"
-#define DIALOG_PRINT_FINISH_FR              "L'impression est terminée!"
-#define DIALOG_PRINT_TIME_FR                "Temps d'impression: "
-#define DIALOG_REPRINT_FR                   "Print again"
-#define DIALOG_WIFI_ENABLE_TIPS_FR          "The wifi module is being configured,\nplease wait a moment....."
+#define DIALOG_REPRINT_FROM_BREAKPOINT_FR "Continuer?"
+#define DIALOG_ERROR_TIPS1_FR         "Erreur:error:Aucun fichier, \nvérifiez à nouveau."
+#define DIALOG_ERROR_TIPS2_FR         "Erreur:La opération a échoué. \nVerifiez que le baudrate de l'écran et de \nla carte mère soient identique!"
+#define DIALOG_ERROR_TIPS3_FR         "Erreur: le nom du fichier ou le \nchemin d'accès est trop long."
+#define DIALOG_UNBIND_PRINTER_FR      "Unbind the printer?"
+#define DIALOG_FILAMENT_NO_PRESS_FR   "Filament detection switch is not pressed"
+#define DIALOG_PRINT_FINISH_FR        "L'impression est terminée!"
+#define DIALOG_PRINT_TIME_FR          "Temps d'impression: "
+#define DIALOG_REPRINT_FR             "Print again"
+#define DIALOG_WIFI_ENABLE_TIPS_FR    "The wifi module is being configured,\nplease wait a moment....."
 
-#define MESSEGE_PAUSING_FR          "Parking..."
-#define MESSEGE_CHANGING_FR         "Attente filament pour démarrer"
-#define MESSEGE_UNLOAD_FR           "Attente retrait du filament"
-#define MESSEGE_WAITING_FR          "Presser bouton,pour reprendre"
-#define MESSEGE_INSERT_FR           "Insérer filament et app. bouton pour continuer..."
-#define MESSEGE_LOAD_FR             "Attente chargement filament"
-#define MESSEGE_PURGE_FR            "Attente Purge filament"
-#define MESSEGE_RESUME_FR           "Attente reprise impression"
-#define MESSEGE_HEAT_FR             "Presser le bouton pour chauffer..."
-#define MESSEGE_HEATING_FR          "Buse en chauffe Patienter SVP..."
-#define MESSEGE_OPTION_FR           "Purger davantage ou continuer l'impression?"
-#define MESSEGE_PURGE_MORE_FR       "Purge"
-#define MESSEGE_CONTINUE_PRINT_FR   "Impression"
+#define MESSAGE_PAUSING_FR        "Parking..."
+#define MESSAGE_CHANGING_FR       "Attente filament pour démarrer"
+#define MESSAGE_UNLOAD_FR         "Attente retrait du filament"
+#define MESSAGE_WAITING_FR        "Presser bouton, pour reprendre"
+#define MESSAGE_INSERT_FR         "Insérer filament et app. bouton pour continuer..."
+#define MESSAGE_LOAD_FR           "Attente chargement filament"
+#define MESSAGE_PURGE_FR          "Attente purge filament"
+#define MESSAGE_RESUME_FR         "Attente reprise impression"
+#define MESSAGE_HEAT_FR           "Presser le bouton pour chauffer..."
+#define MESSAGE_HEATING_FR        "Buse en chauffe Patienter SVP..."
+#define MESSAGE_OPTION_FR         "Purger davantage ou continuer l'impression?"
+#define MESSAGE_PURGE_MORE_FR     "Purge"
+#define MESSAGE_CONTINUE_PRINT_FR "Impression"
+#define EEPROM_SETTINGS_TITLE_FR  "Paramètres EEPROM"
+#define EEPROM_SETTINGS_STORE_FR  "Stocker les paramètres dans l'EEPROM"
+#define EEPROM_SETTINGS_READ_FR   "Lire les paramètres de l'EEPROM"
+#define EEPROM_SETTINGS_REVERT_FR "Rétablir les paramètres par défaut d'usine"
+
+#define EEPROM_STORE_TIPS_FR  "Stocker les paramètres dans l'EEPROM?"
+#define EEPROM_READ_TIPS_FR   "Lire les paramètres de l'EEPROM?"
+#define EEPROM_REVERT_TIPS_FR "Rétablir les paramètres par défaut d'usine?"
+
+#define MORE_CUSTOM1_TEXT_FR  USER_DESC_1
+#define MORE_CUSTOM2_TEXT_FR  USER_DESC_2
+#define MORE_CUSTOM3_TEXT_FR  USER_DESC_3
+#define MORE_CUSTOM4_TEXT_FR  USER_DESC_4
+#define MORE_CUSTOM5_TEXT_FR  USER_DESC_5
+#define MORE_CUSTOM6_TEXT_FR  USER_DESC_6
+#define MORE_CUSTOM7_TEXT_FR  USER_DESC_7
